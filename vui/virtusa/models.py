@@ -18,6 +18,7 @@ class Ml_models(models.Model):
     summary = models.TextField(null=False)
     content = models.TextField(null=False)
     extras = models.TextField(null= True)
+    image = models.ImageField(upload_to='images/',default='images/default.jpg')
     url = models.URLField(null=True,blank=True)
     inputs_csv = models.FileField(upload_to="static/inputs/")
     result_key = models.CharField(max_length=50,null=True,blank=True)
